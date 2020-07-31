@@ -1,7 +1,7 @@
 const navSlide = () => {
     const cheeseburger = document.querySelector('.cheeseburger');
     const nav = document.querySelector('.main-nav a');
-    const main-nav a = document.querySelectorAll('.main-nav li');
+    const mainnav = document.querySelectorAll('.main-nav li');
 
 cheeseburger.addEventListener('click',() => {
             //Toggle Nav
@@ -19,4 +19,4 @@ cheeseburger.addEventListener('click',() => {
 
 cheeseburger.classList.toggle('toggle');
 
-navSlide();
+navSlide()};
