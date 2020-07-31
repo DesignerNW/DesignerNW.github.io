@@ -1,9 +1,9 @@
-* {
+* { 
     box-sizing: border-box;
 }
 
 #penman-logo {
-    margin-right: 12em;
+    margin-right: 4em;
     float: left;
 
 }
@@ -13,23 +13,24 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    font-size: 1.4em;
+    font-size: 1em;
     font-family: ProximaNova-Regular, Arial, sans-serif;
     color: #000;
     text-decoration: none;
-    padding: 20px;
+
 }
 
 .main-nav {
     display:flex;
     justify-content: space-around;
-    width: 100%;
+    width: 80%;
 
 }
 .main-nav a, li {
     color: #000;
     text-decoration: none;
     list-style: none;
+    
 }
 
 .cheeseburger {
@@ -41,7 +42,6 @@ nav {
     height: 3px;
     background-color: #000;
     margin: 5px;
-    
 }
 
 .introtext {
@@ -57,12 +57,12 @@ nav {
 }
 
 /* Media Queries */
-@media screen and (max-width: 1024px){
+@media only screen and (max-width: 1274px){
     .main-nav {
-        width: 80%;
+        width: 85%;
     }
 }
-@media screen and (max-width: 768px){
+@media only screen and (max-width: 990px){
     body {
         overflow-x:hidden;
     }
@@ -71,16 +71,19 @@ nav {
         right: 0px;
         height: 92vh;
         top: 8vh;
+        background-color: #000;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        width: 60%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
 
     }
+
+
     
-    .main-nav li{
+    .main-nav a, li{
         opacity: 0;
     }
 
@@ -88,7 +91,27 @@ nav {
         display: block;
     }
 
-    .main-nav-active {
+    .nav-active {
         transform: translateX(0%);
     }
+}
+@keyframes navLinkFade {
+    from{
+        opacity:0;
+        transform: translateX(50px)
+    }
+    to{
+        opacity:1;
+        transform: translateX(opx);
+    }
+}
+
+.toggle .single{
+    transform: rotate(-45deg translate(-5px, 6px));
+}
+.toggle .double{
+opacity:0;
+}
+.toggle .triple{
+    transform: rotate(45deg translate(-5px, -6px)); 
 }
